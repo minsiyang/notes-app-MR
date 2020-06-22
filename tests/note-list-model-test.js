@@ -11,3 +11,14 @@ function canStoreNotesInNoteArray() {
   expect.isTrue(noteList.notes[0] === note);
 }
 canStoreNotesInNoteArray();
+
+function canReturnStoredNotesInNoteArray() {
+  let noteList = new NoteList();
+  let note = new Note("hello");
+  let anotherNote = new Note("Yo");
+  noteList.addNote(note);
+  noteList.addNote(anotherNote);
+  expect.isTrue(noteList.returnNote()[0] === note )
+  expect.isTrue(noteList.returnNote()[1] === anotherNote)
+}
+canReturnStoredNotesInNoteArray();
