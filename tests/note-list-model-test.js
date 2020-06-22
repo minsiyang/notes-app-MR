@@ -6,19 +6,16 @@ constructsWithAnEmptyArray();
 
 function canStoreNotesInNoteArray() {
   let noteList = new NoteList();
-  let note = new Note("hello");
-  noteList.addNote(note);
-  expect.isTrue(noteList.notes[0] === note);
+  noteList.addNote("note");
+  expect.isTrue(typeof noteList.notes[0] === "object");
 }
 canStoreNotesInNoteArray();
 
 function canReturnStoredNotesInNoteArray() {
   let noteList = new NoteList();
-  let note = new Note("hello");
-  let anotherNote = new Note("Yo");
-  noteList.addNote(note);
-  noteList.addNote(anotherNote);
-  expect.isTrue(noteList.returnNote()[0] === note )
-  expect.isTrue(noteList.returnNote()[1] === anotherNote)
+  noteList.addNote("note");
+  noteList.addNote("anotherNote");
+  expect.isTrue(noteList.returnNote()[0].text === "note");
+  expect.isTrue(noteList.returnNote()[1].text === "anotherNote");
 }
 canReturnStoredNotesInNoteArray();
