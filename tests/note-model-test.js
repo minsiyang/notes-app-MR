@@ -6,6 +6,7 @@ function constructingWithTheGivenString() {
 constructingWithTheGivenString();
 
 function hasMethodToReturnText() {
+  //this is it part of the describe/it
   let string = "Chris's idea!!";
   let note = new Note(string);
   expect.isTrue(note.returnText() === string);
