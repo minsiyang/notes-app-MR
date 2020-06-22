@@ -4,6 +4,8 @@ var expect = {
       throw new Error(
         "Expectation failed: " + expectationToCheck + " is not truthy"
       );
+    } else {
+      console.log("Test has passed");
     }
   },
 
@@ -12,6 +14,8 @@ var expect = {
       throw new Error(
         "Expectation Failed: " + expectationToCheck + " is not falsy"
       );
+    } else {
+      console.log("Test has passed");
     }
   },
 };
