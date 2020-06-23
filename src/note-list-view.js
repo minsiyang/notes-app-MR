@@ -10,7 +10,7 @@
         array.forEach(function(note) {
           output += `<ul><li><div>${note.returnText()}</div></li></ul>`
         })
-        return output
+        return output;
     }
     exports.NoteListView = NoteListView;
 })(this);
