@@ -7,7 +7,7 @@ constructsWithAnEmptyArray();
 function canStoreNotesInNoteArray() {
   let noteList = new NoteList();
   noteList.addNote("note");
-  expect.isTrue(typeof noteList.notes[0] === "object");
+  expect.isTrue(noteList.notes[0] instanceof Note);
 }
 canStoreNotesInNoteArray();
 
