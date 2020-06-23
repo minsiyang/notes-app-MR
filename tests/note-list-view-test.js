@@ -6,9 +6,17 @@ function constructsWithAnNoteListModel() {
   }
   constructsWithAnNoteListModel();
 
-function returnHTMLString() {
+function returnHTMLStringNoNote() {
     let list = new NoteList();
     let view = new NoteListView(list);
     expect.isTrue( view.returnHTML() === "")
 }
-returnHTMLString();
+returnHTMLStringNoNote();
+
+function returnHTMLStringOneNote() {
+    let list = new NoteList();
+    let view = new NoteListView(list);
+    list.addNote("Rae");
+    expect.isTrue( view.returnHTML() === "<ul><li><div>Rae</div></li></ul>")
+}
+returnHTMLStringOneNote();
